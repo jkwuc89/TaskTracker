@@ -1,0 +1,28 @@
+# Ignore gradle wrapper support stuff
+.gradle
+
+# Ignore build output
+build
+out
+
+# Ignore log files
+*.log
+
+# webcontent is deployed here for Spring Boot to host
+src/main/resources/public
+
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr

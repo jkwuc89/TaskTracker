@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Tracker</title>
+</head>
+
+<body>
+    <div class="headerContainer">
+        <div class="headerText">
+            <span class="titleText">Task Tracker</span><br>
+        </div>
+    </div>
+    <div class="taskContainer">
+        <div class="taskColumn taskFormColumn">
+            <span class="taskColumnHeader">Create a Task</span>
+            <form id="addTaskForm">
+                <label for="taskNameInput" class="formLabel">Task Name</label>
+                <input id="taskNameInput" type="text" class="textInputField"/>
+                <label for="dateInput" class="formLabel">Date</label>
+                <input id="dateInput" type="date" class="textInputField"/>
+                <label for="assignedToInput" class="formLabel">Assigned To</label>
+                <input id="assignedToInput" type="text" class="textInputField"/>
+                <div class="verticalSpacer"></div>
+                <button id="submitButton" type="submit" class="submitButton noshadow">Submit</button>
+            </form>
+        </div>
+        <div class="taskColumn taskListColumn">
+            <span class="taskColumnHeader">Existing Tasks</span>
+            <div class="verticalSpacer"></div>
+            <div class="existingTaskListContainer">
+                <ul id="existingTaskList">
+                </ul>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</body>
+
+</html>

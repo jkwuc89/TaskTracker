@@ -1,0 +1,202 @@
+/*
+ * app.scss - Main style sheet for this app
+ */
+@import "_color";
+
+body {
+    background: $bgcolor;
+    color: $color;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    margin: 0;
+}
+
+button {
+    background-color: #434343;
+    border-radius: 3px; /* CSS3 */
+    border: 0;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: Georgia, "Times New Roman", serif;
+    height: 20px;
+}
+
+/*
+ * Helper styles
+ */
+.noshadow {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.verticalSpacer {
+    height: 30px;
+}
+
+/*
+ * Header block styles - using table and table-cell below
+ * to vertically center header content
+ */
+.headerContainer {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: #f0f0f0;
+    border: 10px solid #e2e2e2;
+    box-sizing: border-box;
+    display: table;
+    height: 140px;
+    width: 100%;
+}
+
+.headerText {
+    display: table-cell;
+    padding-left: 30px;
+    vertical-align: middle;
+}
+
+.titleText {
+    color: $color;
+    font-size: 34pt;
+    font-weight: bold;
+}
+
+.versionText {
+    color: #616161;
+    font-size: 18pt;
+    font-weight: normal;
+}
+
+/*
+ * Task column styles
+ */
+.taskContainer {
+    background-color: #FFFFFF;
+    border-color: #f0f0f0;
+    border-style: solid;
+    border-width: 0 10px 0 10px;
+    box-sizing: border-box;
+    height: 500px;
+    width: 100%;
+}
+
+.taskColumn {
+    background-color: #FFFFFF;
+    border: 0 solid #f0f0f0;
+    box-sizing: border-box;
+    float: left;
+    height: 100%;
+    padding-top: 35px;
+    width: 50%;
+}
+
+.taskFormColumn {
+    border-right-width: 2px;
+    padding-left: 30px;
+}
+
+.taskListColumn {
+    border-left-width: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.taskColumnHeader {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18pt;
+    font-weight: normal;
+}
+
+/*
+ * Task form styles
+ */
+.formLabel {
+    display: block;
+    font-size: 14pt;
+    font-weight: bold;
+    padding-bottom: 8px;
+    padding-top: 30px;
+}
+
+.textInputField {
+    -moz-border-radius: 3px; /* Firefox */
+    -webkit-border-radius: 3px; /* Safari, Chrome */
+    background-color: #ECECEC;
+    border-radius: 3px; /* CSS3 */
+    border: 1px solid #DEDEDE;
+    font-size: 14pt;
+    font-weight: normal;
+    height: 40px;
+    padding-left: 10px;
+    width: 90%;
+}
+
+.submitButton {
+    font-size: 18pt;
+    height: 50px;
+    width: 110px;
+}
+
+/*
+ * Existing tasks column styles
+ */
+.existingTaskListContainer {
+    border-radius: 5px; /* CSS3 */
+    border: 5px solid #dedede;
+    box-sizing: border-box;
+    height: 360px;
+    width: 100%;
+}
+
+#existingTaskList {
+    list-style-type: none;
+    max-height: 350px;
+    overflow: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    /* Override webkit style defaults for this list */
+    -webkit-padding-start: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+}
+
+/* Alternate colors in the existing task list */
+#existingTaskList li:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+#existingTaskList li:nth-child(even) {
+    background-color: #ECECEC;
+}
+
+.tasklistItemContainer {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+}
+
+.taskListItemTaskName {
+    color: $color;
+    flex-basis: 40%;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14pt;
+    font-weight: normal;
+}
+
+.taskListItemDate {
+    color: #666666;
+    flex-grow: 0.6;
+    font-weight: normal;
+}
+
+.taskListItemAssignedTo {
+    color: #333333;
+    flex-grow: 1.5;
+    float: right;
+    font-weight: bold;
+}
+
+.delete {
+    flex-grow: 0.5
+}
