@@ -28,10 +28,6 @@ class TaskTrackerApplication : SpringBootServletInitializer() {
         }
     }
 
-    override fun configure(application: SpringApplicationBuilder): SpringApplicationBuilder {
-        return application.sources(TaskTrackerApplication::class.java)
-    }
-
     @Bean
     fun auditorAware(): AuditorAware<String> {
         return AuditorAwareImpl()
