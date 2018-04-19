@@ -46,7 +46,7 @@ az appservice plan create --name <AppServicePlanName> --resource-group <Resource
 ```
 Create web app
 ```bash
-az webapp create --name <AppName> --resource-group <ResourceGroupName> --plan <AppServicePlanName>
+az webapp create --name <AppName> --resource-group <ResourceGroupName> --plan <AppServicePlanName>
 ```
 Add web app environment variables
 ```bash
