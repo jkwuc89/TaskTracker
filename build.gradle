@@ -4,7 +4,7 @@ buildscript {
 		appVersion = "1.0.0-SNAPSHOT"
 		antCommonsNetVersion = "1.10.+"
 		commonsNetVersion = "3.6.+"
-		gradleVersion = "4.6.+"
+		gradleVersion = "4.7.+"
 		h2Version = "1.4.+"
 		jacksonModuleVersion = "2.9.+"
 		junitPluginVersion = "1.1.+"
@@ -96,7 +96,7 @@ task deployToAzure {
 			taskdef(name: "ftp",
 					classname: "org.apache.tools.ant.taskdefs.optional.net.FTP",
 					classpath: configurations.ftpAntTask.asPath)
-			ftp(server: "waws-prod-ch1-031.ftp.azurewebsites.windows.net",
+			ftp(server: "ftp://waws-prod-dm1-075.ftp.azurewebsites.windows.net/site/wwwroot",
 				userid: "${ftpUsername}",
 				password: "${ftpPassword}",
 				verbose: "yes",
