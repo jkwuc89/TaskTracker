@@ -82,10 +82,12 @@ war {
 task deployToAzure {
 	description "Deploy war to Azure via FTP"
 	doLast {
-		def console = System.console();
+		def console = System.console()
+		def ftpServer
 		def ftpUsername
 		def ftpPassword
 		if (console != null) {
+			ftpServer = System.console().readLine("\nPlease enter Azure ftp server: ")
 			ftpUsername = System.console().readLine("\nPlease enter Azure ftp username: ")
 			ftpPassword = System.console().readPassword("Please enter Azure ftp password: ")
 		} else {
@@ -96,7 +98,7 @@ task deployToAzure {
 			taskdef(name: "ftp",
 					classname: "org.apache.tools.ant.taskdefs.optional.net.FTP",
 					classpath: configurations.ftpAntTask.asPath)
-			ftp(server: "ftp://waws-prod-dm1-075.ftp.azurewebsites.windows.net/site/wwwroot",
+			ftp(server: "ftp://${ftpServer}",
 				userid: "${ftpUsername}",
 				password: "${ftpPassword}",
 				verbose: "yes",
