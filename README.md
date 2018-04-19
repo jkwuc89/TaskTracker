@@ -38,5 +38,25 @@ This repository currently serves as the demo app for my presentation,
       * **js** - JavaScript source
         * **tests** - Jasmine based unit tests
       * **scss** - SCSS based styles
+      
+## Azure Cloud Commands
+Create app service plan
+```bash
+az appservice plan create --name <AppServicePlanName> --resource-group <ResourceGroupName> --sku B1`
+```
+Create web app
+```bash
+az webapp create --name <AppName> --resource-group <ResourceGroupName> --plan <AppServicePlanName>
+```
+Add web app environment variables
+```bash
+az webapp config appsettings set --settings SPRING_PROFILES_ACTIVE=mssql --resource-group <ResourceGroupName> --name <AppName>
+az webapp config appsettings set --settings SPRING_DATASOURCE_URL=<JDBCConnectionString> --resource-group <ResourceGroupName> --name <AppName>
+```
+Discover FTP deployment credentials
+```bash
+az webapp deployment list-publishing-profiles --name <AppName> --resource-group <ResourceGroupName> --query "[?publishMethod=='FTP'].{URL:publishUrl, Username:userName,Password:userPWD}" --output json
+```
+      
 
 
