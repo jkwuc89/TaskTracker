@@ -98,7 +98,7 @@ task deployToAzure {
 			taskdef(name: "ftp",
 					classname: "org.apache.tools.ant.taskdefs.optional.net.FTP",
 					classpath: configurations.ftpAntTask.asPath)
-			ftp(server: "ftp://${ftpServer}",
+			ftp(server: "${ftpServer}",
 				userid: "${ftpUsername}",
 				password: "${ftpPassword}",
 				verbose: "yes",
