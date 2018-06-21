@@ -1,6 +1,8 @@
 // val creates getter only, var creates getter and setter
 data class VideoGame(val name: String, val publisher: String, var reviewScore: Int)
 
+
+// Other Kotlin tidbits
 fun main(args : Array<String>) {
     // Supports property access
     val aVideoGame = VideoGame("Call of Duy", "Activision", 90)
