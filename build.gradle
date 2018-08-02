@@ -4,7 +4,6 @@ buildscript {
 		appVersion = "1.0.0-SNAPSHOT"
 		antCommonsNetVersion = "1.10.+"
 		commonsNetVersion = "3.6.+"
-		gradleVersion = "4.9.+"
 		h2Version = "1.4.+"
 		jacksonModuleVersion = "2.9.+"
 		junitPluginVersion = "1.2.+"
@@ -29,10 +28,6 @@ buildscript {
 
 repositories {
 	mavenCentral()
-}
-
-task wrapper(type: Wrapper) {
-	gradleVersion = gradleVersion
 }
 
 apply plugin: "kotlin"
