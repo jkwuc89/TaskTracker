@@ -9,7 +9,7 @@ buildscript {
 		junitPluginVersion = "1.2.+"
 		junitVersion = "5.2.+"
 		jvmVersion = "1.8"
-		kotlinVersion = "1.2.60"
+		kotlinVersion = "1.2.+"
 		mssqlDriverVersion = "6.4.0.jre8"
 		mysqlConnectorVersion = "5.1.+"
 		oroVersion = "2.0.+"
